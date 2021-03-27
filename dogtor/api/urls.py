@@ -1,6 +1,7 @@
 from django.urls import path, include
 from .views import ListOwnersAPIView, RetrieveOwnersAPIView, CreateOwnersAPIView, UpdateOwnersAPIView, DestroyOwnersAPIView    # 6 DRF Generic Class Views
 from .views import ListPetsAPIView, RetrievePetsAPIView, CreatePetsAPIView, UpdatePetsAPIView, DestroyPetsAPIView
+from .views import ListOfficesAPIView, CreateOfficesAPIView
 
 # from rest_framework import routers
 # from .views import OwnersViewSet
@@ -18,6 +19,9 @@ urlpatterns = [
     path("pets/<int:pk>/", RetrievePetsAPIView.as_view(), name="retrieve-pets"),
     path("pets/update/<int:pk>/", UpdatePetsAPIView.as_view(), name="update-pets"),
     path("pets/destroy/<int:pk>/", DestroyPetsAPIView.as_view(), name="destroy-pets"),
+    # Office #
+    path("offices/", ListOfficesAPIView.as_view(), name="list-offices"),   # 7 DRF Generic Class Views
+    path("offices/create/", CreateOfficesAPIView.as_view(), name="create-office"),
 ]
 
 

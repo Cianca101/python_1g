@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from vet.models import PetOwner, Pet
+from vet.models import PetOwner, Pet, BranchOffice
 
 # # Serializers define the API representation.
 # Owners #
@@ -43,6 +43,17 @@ class PetsUpdateSerializer(serializers.ModelSerializer):
 class PetsDestroySerializer(serializers.ModelSerializer):
     class Meta:
         model = Pet
+        fields = "__all__"
+
+# Office #
+class OfficesListSerializer(serializers.ModelSerializer):  # 3 DRF Generic Class Views
+    class Meta:
+        model = BranchOffice
+        fields = ["id", "first_name", "last_name",]
+
+class OfficesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BranchOffice
         fields = "__all__"
 
 # class OwnersSerializer(serializers.HyperlinkedModelSerializer):
