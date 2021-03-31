@@ -1,5 +1,6 @@
 from django.urls import path, include
-from .views import ListOwnersAPIView, RetrieveOwnersAPIView, CreateOwnersAPIView, UpdateOwnersAPIView, DestroyOwnersAPIView    # 6 DRF Generic Class Views
+# 6 DRF Generic Class Views
+from .views import ListOwnersAPIView, RetrieveOwnersAPIView, CreateOwnersAPIView, UpdateOwnersAPIView, DestroyOwnersAPIView    
 from .views import ListPetsAPIView, RetrievePetsAPIView, CreatePetsAPIView, UpdatePetsAPIView, DestroyPetsAPIView
 from .views import ListOfficesAPIView, CreateOfficesAPIView
 

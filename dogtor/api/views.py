@@ -2,7 +2,8 @@
 from rest_framework import generics # vistas generic class  # 1 DRF Generic Class Views
 
 from vet.models import PetOwner, Pet, BranchOffice
-from .serializers import OwnersListSerializer, OwnersSerializer, OwnersUpdateSerializer, OwnersDestroySerializer  # 4 DRF Generic Class Views
+# 4 DRF Generic Class Views
+from .serializers import OwnersListSerializer, OwnersSerializer, OwnersUpdateSerializer, OwnersDestroySerializer  
 from .serializers import PetsListSerializer, PetsSerializer, PetsUpdateSerializer, PetsDestroySerializer
 from .serializers import OfficesListSerializer, OfficesSerializer
 
